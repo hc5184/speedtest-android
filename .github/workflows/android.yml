@@ -19,6 +19,10 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: gradle
+
+
+    - name: ll
+      run: ls
     - name: enter folder
       run: cd Speedtest-Android
     - name: pwd

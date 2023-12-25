@@ -20,16 +20,13 @@ jobs:
         distribution: 'temurin'
         cache: gradle
 
-
-    - name: ll
-      run: ls
-    - name: enter folder
-      run: cd Speedtest-Android
-    - name: pwd
-      run: pwd
-    - name: ll
-      run: ls
     - name: Grant execute permission for gradlew
       run: chmod +x Speedtest-Android/gradlew
     - name: Build with Gradle
       run: cd Speedtest-Android;./gradlew build
+
+    - name: Upload APK
+      uses: actions/upload-artifact@v2
+      with:
+        name: App
+        path: ${{ github.workspace }}/app/build/outputs/apk/release/app_release.apk

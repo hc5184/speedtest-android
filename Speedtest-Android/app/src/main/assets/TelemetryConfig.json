@@ -1,1 +1,6 @@
-{}
+{
+    "telemetryLevel":"basic",
+    "server":"//192.168.1.202:25500",
+    "path":"results/telemetry.php",
+    "shareURL":"results/?id=%s"
+}

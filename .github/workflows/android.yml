@@ -29,4 +29,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: App
-        path: ${{ github.workspace }}/app/build/outputs/apk/release/app_release.apk
+        path: ${{ github.workspace }}/Speedtest-Android/app/build/outputs/apk/release/app_release.apk

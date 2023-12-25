@@ -25,11 +25,11 @@ jobs:
     - name: Build with Gradle
       run: cd Speedtest-Android;./gradlew build
 
-    - name: find
-      run: find ./ -name "*.apk"
+    # - name: find
+    #   run: find ./ -name "*.apk"
 
     - name: Upload APK
       uses: actions/upload-artifact@v2
       with:
         name: App
-        path: ${{ github.workspace }}/Speedtest-Android/build/outputs/apk/release/app_release.apk
+        path: ${{ github.workspace }}/Speedtest-Android/app/build/outputs/apk/release/app-release-unsigned.apk
